@@ -37,13 +37,14 @@ dependencies = [
     # onnxruntime==1.17.1
     # for cuda 12.1(default 11.8)
     # onnxruntime-gpu --extra-index-url https://aiinfra.pkgs.visualstudio.com/PublicPackages/_packaging/onnxruntime-cuda-12/pypi/simple/
-    # this is for onnx: 
+    # this is for onnx:
     # protobuf==3.20.3
     # open clip for SDXL
     # open-clip-torch==2.20.0
     # For logging
     "rich==13.7.0",
     "library",
+    "datasets>=4.1.1",
 ]
 
 [tool.uv.sources]
