@@ -45,6 +45,7 @@ dependencies = [
     "rich==13.7.0",
     "library",
     "datasets>=4.1.1",
+    "matplotlib>=3.10.7",
 ]
 
 [tool.uv.sources]
