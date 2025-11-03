@@ -46,6 +46,7 @@ dependencies = [
     "library",
     "datasets>=4.1.1",
     "matplotlib>=3.10.7",
+    "xformers>=0.0.32.post2",
 ]
 
 [tool.uv.sources]
