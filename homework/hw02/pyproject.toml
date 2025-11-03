@@ -43,7 +43,11 @@ dependencies = [
     # open-clip-torch==2.20.0
     # For logging
     "rich==13.7.0",
+    "library",
 ]
+
+[tool.uv.sources]
+library = { path = "/home/lev/mipt.project/ml-modern/homework/hw02/sd-scripts", editable = true }
 
 [dependency-groups]
 dev = [

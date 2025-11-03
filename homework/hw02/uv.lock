@@ -440,6 +440,7 @@ dependencies = [
     { name = "ftfy" },
     { name = "huggingface-hub" },
     { name = "imagesize" },
+    { name = "library" },
     { name = "lion-pytorch" },
     { name = "opencv-python" },
     { name = "prodigyopt" },
@@ -469,6 +470,7 @@ requires-dist = [
     { name = "ftfy", specifier = "==6.1.1" },
     { name = "huggingface-hub", specifier = "==0.24.5" },
     { name = "imagesize", specifier = "==1.4.1" },
+    { name = "library", editable = "sd-scripts" },
     { name = "lion-pytorch", specifier = "==0.0.6" },
     { name = "opencv-python", specifier = "==4.8.1.78" },
     { name = "prodigyopt", specifier = "==1.0" },
@@ -667,6 +669,11 @@ sdist = { url = "https://files.pythonhosted.org/packages/26/2d/ef58fed122b268c69
 wheels = [
     { url = "https://files.pythonhosted.org/packages/ab/b5/36c712098e6191d1b4e349304ef73a8d06aed77e56ceaac8c0a306c7bda1/jupyterlab_widgets-3.0.16-py3-none-any.whl", hash = "sha256:45fa36d9c6422cf2559198e4db481aa243c7a32d9926b500781c830c80f7ecf8", size = 914926, upload-time = "2025-11-01T21:11:28.008Z" },
 ]
+
+[[package]]
+name = "library"
+version = "0.0.0"
+source = { editable = "sd-scripts" }
 
 [[package]]
 name = "lightning-utilities"
