@@ -1,10 +1,11 @@
-# CLAUDE.md
+# AGENTS.md
 
-This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
+This file provides guidance to Agents when working with code in this repository.
 
 ## Repository Overview
 
-This repository contains course materials for "Modern Machine Learning Models" (Современные Модели Машинного Обучения - СММО). The course focuses on diffusion models and the HuggingFace ecosystem, with materials primarily in Russian.
+This repository contains course materials for "Modern Machine Learning Models" (Современные Модели Машинного Обучения - СММО). 
+The course focuses on diffusion models and the HuggingFace ecosystem, with materials primarily in Russian.
 
 ## Repository Structure
 
