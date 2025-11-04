@@ -18,7 +18,7 @@ network_alpha = 64
 network_dropout = 0
 
 # ===== Training Parameters =====
-max_train_steps = 2000  # ~6-8 epochs for 3141 images with batch_size=12
+max_train_steps = 2000          # ~6-8 epochs for 3141 images with batch_size=12
 learning_rate = 1e-4
 unet_lr = 1e-4
 text_encoder_lr = 5e-5
@@ -29,7 +29,7 @@ lr_warmup_steps = 100
 optimizer_type = "AdamW8bit"
 
 # ===== Memory and Performance (H100 Optimized) =====
-mixed_precision = "bf16"  # Better numerical stability on H100
+mixed_precision = "bf16"        # Better numerical stability on H100
 xformers = true
 cache_latents = true
 gradient_checkpointing = true
@@ -48,8 +48,13 @@ log_with = "tensorboard"
 max_data_loader_n_workers = 12
 persistent_data_loader_workers = true
 
+# ===== Sample Generation =====
+sample_every_n_epochs = 1       # Generate samples every epoch
+sample_sampler = "euler_a"      # or "ddim", "k_euler", "k_dpm_2", etc.
+sample_prompts = "/home/lev/project/ml-modern/homework/hw02/sample_prompts.txt"
+
 # ===== Miscellaneous =====
 seed = 42
 prior_loss_weight = 1.0
 noise_offset = 0.0
-min_snr_gamma = 5.0  # Improves training stability
+min_snr_gamma = 5.0  #           Improves training stability
