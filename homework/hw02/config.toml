@@ -1,6 +1,6 @@
 # Dataset configuration for LoRA fine-tuning
 # Framework: kohya-ss/sd-scripts
-# Dataset: cartoon-blip-captions (3141 images, 512x512)
+# Dataset:  cartoon-blip-captions (3141 images, 512x512)
 
 [general]
 shuffle_caption = true
@@ -9,7 +9,7 @@ keep_tokens = 1
 
 [[datasets]]
 resolution = 512
-batch_size = 12  # Optimized for H100 80GB
+batch_size = 12             # Optimized for H100 80GB
 enable_bucket = true
 bucket_no_upscale = true
 bucket_reso_steps = 64

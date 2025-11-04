@@ -58,3 +58,9 @@ seed = 42
 prior_loss_weight = 1.0
 noise_offset = 0.0
 min_snr_gamma = 5.0  #           Improves training stability
+
+# Basic wandb settings  
+log_with = "wandb"  
+wandb_run_name = "ml-modern-hw02-lora-cartoons"  
+log_tracker_name = "custom_tracker_name"  
+log_config = true  
