@@ -346,6 +346,17 @@ wheels = [
 ]
 
 [[package]]
+name = "dotenv"
+version = "0.9.9"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "python-dotenv" },
+]
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/b2/b7/545d2c10c1fc15e48653c91efde329a790f2eecfbbf2bd16003b5db2bab0/dotenv-0.9.9-py2.py3-none-any.whl", hash = "sha256:29cf74a087b31dafdb5a446b6d7e11cbce8ed2741540e2339c69fbef92c94ce9", size = 1892, upload-time = "2025-02-19T22:15:01.647Z" },
+]
+
+[[package]]
 name = "easygui"
 version = "0.98.3"
 source = { registry = "https://pypi.org/simple" }
@@ -519,6 +530,7 @@ dependencies = [
     { name = "bitsandbytes" },
     { name = "datasets" },
     { name = "diffusers", extra = ["torch"] },
+    { name = "dotenv" },
     { name = "easygui" },
     { name = "einops" },
     { name = "ftfy" },
@@ -534,6 +546,7 @@ dependencies = [
     { name = "safetensors" },
     { name = "tensorboard" },
     { name = "toml" },
+    { name = "torchvision" },
     { name = "transformers" },
     { name = "voluptuous" },
     { name = "xformers" },
@@ -552,12 +565,13 @@ requires-dist = [
     { name = "bitsandbytes", specifier = "==0.44.0" },
     { name = "datasets", specifier = ">=4.1.1" },
     { name = "diffusers", extras = ["torch"], specifier = "==0.25.0" },
+    { name = "dotenv", specifier = ">=0.9.9" },
     { name = "easygui", specifier = "==0.98.3" },
     { name = "einops", specifier = "==0.7.0" },
     { name = "ftfy", specifier = "==6.1.1" },
     { name = "huggingface-hub", specifier = "==0.24.5" },
     { name = "imagesize", specifier = "==1.4.1" },
-    { name = "library", editable = "sd-scripts" },
+    { name = "library", editable = "../../../../mipt.project/ml-modern/homework/hw02/sd-scripts" },
     { name = "lion-pytorch", specifier = "==0.0.6" },
     { name = "matplotlib", specifier = ">=3.10.7" },
     { name = "opencv-python", specifier = "==4.8.1.78" },
@@ -567,6 +581,7 @@ requires-dist = [
     { name = "safetensors", specifier = "==0.4.2" },
     { name = "tensorboard" },
     { name = "toml", specifier = "==0.10.2" },
+    { name = "torchvision", specifier = ">=0.23.0" },
     { name = "transformers", specifier = "==4.44.0" },
     { name = "voluptuous", specifier = "==0.13.1" },
     { name = "xformers", specifier = ">=0.0.32.post2" },
@@ -788,7 +803,7 @@ wheels = [
 [[package]]
 name = "library"
 version = "0.0.0"
-source = { editable = "sd-scripts" }
+source = { editable = "../../../../mipt.project/ml-modern/homework/hw02/sd-scripts" }
 
 [[package]]
 name = "lightning-utilities"
@@ -1369,6 +1384,15 @@ wheels = [
 ]
 
 [[package]]
+name = "python-dotenv"
+version = "1.2.1"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/f0/26/19cadc79a718c5edbec86fd4919a6b6d3f681039a2f6d66d14be94e75fb9/python_dotenv-1.2.1.tar.gz", hash = "sha256:42667e897e16ab0d66954af0e60a9caa94f0fd4ecf3aaf6d2d260eec1aa36ad6", size = 44221, upload-time = "2025-10-26T15:12:10.434Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/14/1b/a298b06749107c305e1fe0f814c6c74aea7b2f1e10989cb30f544a1b3253/python_dotenv-1.2.1-py3-none-any.whl", hash = "sha256:b81ee9561e9ca4004139c6cbba3a238c32b03e4894671e181b671e8cb8425d61", size = 21230, upload-time = "2025-10-26T15:12:09.109Z" },
+]
+
+[[package]]
 name = "pytorch-lightning"
 version = "1.9.0"
 source = { registry = "https://pypi.org/simple" }
@@ -1733,6 +1757,22 @@ dependencies = [
 sdist = { url = "https://files.pythonhosted.org/packages/85/2e/48a887a59ecc4a10ce9e8b35b3e3c5cef29d902c4eac143378526e7485cb/torchmetrics-1.8.2.tar.gz", hash = "sha256:cf64a901036bf107f17a524009eea7781c9c5315d130713aeca5747a686fe7a5", size = 580679, upload-time = "2025-09-03T14:00:54.077Z" }
 wheels = [
     { url = "https://files.pythonhosted.org/packages/02/21/aa0f434434c48490f91b65962b1ce863fdcce63febc166ca9fe9d706c2b6/torchmetrics-1.8.2-py3-none-any.whl", hash = "sha256:08382fd96b923e39e904c4d570f3d49e2cc71ccabd2a94e0f895d1f0dac86242", size = 983161, upload-time = "2025-09-03T14:00:51.921Z" },
+]
+
+[[package]]
+name = "torchvision"
+version = "0.23.0"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "numpy" },
+    { name = "pillow" },
+    { name = "torch" },
+]
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/4d/49/5ad5c3ff4920be0adee9eb4339b4fb3b023a0fc55b9ed8dbc73df92946b8/torchvision-0.23.0-cp310-cp310-macosx_11_0_arm64.whl", hash = "sha256:7266871daca00ad46d1c073e55d972179d12a58fa5c9adec9a3db9bbed71284a", size = 1856885, upload-time = "2025-08-06T14:57:55.024Z" },
+    { url = "https://files.pythonhosted.org/packages/25/44/ddd56d1637bac42a8c5da2c8c440d8a28c431f996dd9790f32dd9a96ca6e/torchvision-0.23.0-cp310-cp310-manylinux_2_28_aarch64.whl", hash = "sha256:31c583ba27426a3a04eca8c05450524105c1564db41be6632f7536ef405a6de2", size = 2394251, upload-time = "2025-08-06T14:58:01.725Z" },
+    { url = "https://files.pythonhosted.org/packages/93/f3/3cdf55bbf0f737304d997561c34ab0176222e0496b6743b0feab5995182c/torchvision-0.23.0-cp310-cp310-manylinux_2_28_x86_64.whl", hash = "sha256:3932bf67256f2d095ce90a9f826f6033694c818856f4bb26794cf2ce64253e53", size = 8627497, upload-time = "2025-08-06T14:58:09.317Z" },
+    { url = "https://files.pythonhosted.org/packages/97/90/02afe57c3ef4284c5cf89d3b7ae203829b3a981f72b93a7dd2a3fd2c83c1/torchvision-0.23.0-cp310-cp310-win_amd64.whl", hash = "sha256:83ee5bf827d61a8af14620c0a61d8608558638ac9c3bac8adb7b27138e2147d1", size = 1600760, upload-time = "2025-08-06T14:57:56.783Z" },
 ]
 
 [[package]]
