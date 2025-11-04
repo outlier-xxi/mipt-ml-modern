@@ -1,18 +1,55 @@
-# accelerate launch 
-# num_cpu_threads_per_process 
+# Training configuration for LoRA fine-tuning
+# Framework: kohya-ss/sd-scripts
+# Model: Anything-v3-1 (Stable Diffusion 1.5 based)
+# GPU: NVIDIA H100 80GB
+# Dataset: cartoon-blip-captions (3141 images)
 
-pretrained_model_name_or_path=/home/lev/project/ml-modern/homework/hw02/training/pretrained_model/Anything-v3-1/Anything-v3-1.safetensors
-dataset_config=
-output_dir=
-output_name=
-save_model_as=safetensors 
-prior_loss_weight=1.0 
-max_train_steps=400 
-learning_rate=1e-4 
-optimizer_type="AdamW8bit" 
-xformers 
-mixed_precision="fp16" 
-cache_latents 
-gradient_checkpointing
-save_every_n_epochs=1 
-network_module=networks.lora
+# ===== Model and Paths =====
+pretrained_model_name_or_path = "/home/lev/project/ml-modern/homework/hw02/training/pretrained_model/Anything-v3-1/Anything-v3-1.safetensors"
+dataset_config = "/home/lev/project/ml-modern/homework/hw02/config.toml"
+output_dir = "/home/lev/project/ml-modern/homework/hw02/training/output"
+output_name = "cartoon_lora"
+save_model_as = "safetensors"
+
+# ===== Network Architecture =====
+network_module = "networks.lora"
+network_dim = 64
+network_alpha = 64
+network_dropout = 0
+
+# ===== Training Parameters =====
+max_train_steps = 2000  # ~6-8 epochs for 3141 images with batch_size=12
+learning_rate = 1e-4
+unet_lr = 1e-4
+text_encoder_lr = 5e-5
+lr_scheduler = "cosine"
+lr_warmup_steps = 100
+
+# ===== Optimizer =====
+optimizer_type = "AdamW8bit"
+
+# ===== Memory and Performance (H100 Optimized) =====
+mixed_precision = "bf16"  # Better numerical stability on H100
+xformers = true
+cache_latents = true
+gradient_checkpointing = true
+gradient_accumulation_steps = 1
+
+# ===== Saving =====
+save_every_n_epochs = 1
+save_precision = "fp16"
+save_state = false
+
+# ===== Logging =====
+logging_dir = "/home/lev/project/ml-modern/homework/hw02/training/logs"
+log_with = "tensorboard"
+
+# ===== Data Loading =====
+max_data_loader_n_workers = 12
+persistent_data_loader_workers = true
+
+# ===== Miscellaneous =====
+seed = 42
+prior_loss_weight = 1.0
+noise_offset = 0.0
+min_snr_gamma = 5.0  # Improves training stability
