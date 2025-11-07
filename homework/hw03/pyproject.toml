@@ -11,7 +11,7 @@ dependencies = [
     "ipywidgets>=8.1.8",
     "ipykernel>=7.1.0",
     "torchvision>=0.24.0",
-    "accelerate>=1.11.0",
+    "accelerate>=0.20.0,<0.29.0",
 ]
 
 [tool.uv.sources]
