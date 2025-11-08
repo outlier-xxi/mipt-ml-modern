@@ -12,6 +12,8 @@ dependencies = [
     "ipykernel>=7.1.0",
     "torchvision>=0.24.0",
     "accelerate>=0.20.0,<0.29.0",
+    "sentencepiece>=0.2.1",
+    "sacremoses>=0.1.1",
 ]
 
 [tool.uv.sources]
