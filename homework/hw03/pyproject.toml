@@ -16,6 +16,7 @@ dependencies = [
     "sacremoses>=0.1.1",
     "wandb>=0.23.0",
     "dotenv>=0.9.9",
+    "nbformat>=5.10.4",
 ]
 
 [tool.uv.sources]
