@@ -1,0 +1,22 @@
+# Dataset configuration for LoRA fine-tuning
+# Framework: kohya-ss/sd-scripts
+# Dataset:  cartoon-blip-captions (3141 images, 512x512)
+
+[general]
+shuffle_caption = true
+caption_extension = '.txt'
+keep_tokens = 1
+
+[[datasets]]
+resolution = 512
+batch_size = 12             # Optimized for H100 80GB
+enable_bucket = true
+bucket_no_upscale = true
+bucket_reso_steps = 64
+min_bucket_reso = 256
+max_bucket_reso = 1024
+
+  [[datasets.subsets]]
+  image_dir = '/home/lev/project/ml-modern/homework/hw02/training/data/1_cartoon character'
+  class_tokens = 'cartoon character'
+  num_repeats = 1

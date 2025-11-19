@@ -162,8 +162,6 @@ The [doc/](doc/) directory contains:
 - General notes: `Notes.md`, `Info.md`
 - Reference to [International Conference on Machine Learning (ICML)](https://icml.cc/)
 
-Use context7 for 
-
 **Note**: These files contain references to images stored in `.obsidian/` directory (Obsidian vault format).
 
 ## Language Note
