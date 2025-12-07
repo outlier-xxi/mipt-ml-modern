@@ -3,11 +3,16 @@ name = "ml-modern"
 version = "0.1.0"
 requires-python = ">=3.10"
 dependencies = [
+    "accelerate>=1.12.0",
+    "datasets>=4.4.1",
+    "diffusers>=0.35.2",
     "ipykernel>=7.1.0",
     "ipywidgets>=8.1.8",
+    "matplotlib>=3.10.7",
     "pillow>=12.0.0",
     "requests>=2.32.5",
     "timm>=1.0.22",
     "torch>=2.9.1",
     "transformers>=4.57.3",
+    "xformers>=0.0.33.post2",
 ]
