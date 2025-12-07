@@ -127,6 +127,7 @@ src/migrations
 # Temporary files
 **/tmp*
 doc/stuff
+**/**cache
 
 # Data
 **/.data
@@ -135,10 +136,15 @@ doc/stuff
 **/visualizations
 **/reports
 **/results
+**/outputs
+**/*lora_adapter
+**/wandb
 
 doc
-#practice
+practice
 **/logs
 **/log
-
 .obsidian
+
+# Homework
+homework/hw05/goat
